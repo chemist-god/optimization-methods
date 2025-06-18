@@ -11,4 +11,17 @@ class SimpleNeuralNetwork:
         self.b1 = np.zeros((1, hidden_size))
         self.W2 = np.random.randn(hidden_size, output_size) * 0.01
         self.b2 = np.zeros((1, output_size))
-        
+
+        # --- Helper Function - Plot Activations --- #
+
+def plot_activation(activation: callable, title: str):
+  X = np.linspace(-5, 5, 100)
+  Y = activation(X)
+
+  plt.figure(figsize=(6, 4))
+  plt.plot(X, Y)
+  plt.title(title)
+  plt.xlabel('Input')
+  plt.ylabel('Output')
+  plt.grid(True)
+  plt.show()
