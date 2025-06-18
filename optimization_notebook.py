@@ -106,3 +106,14 @@ def mean_squared_error(y_true, y_pred):
 
 def mean_squared_error_derivative(y_true, y_pred):
     return -2 * (y_true - y_pred) / len(y_true)
+
+
+    # Let's simulate optimizing a single parameter 'w'
+# to minimize the function (w - 5)^2
+# The minimum is at w = 5.
+
+def objective_function(w):
+    return (w - 5)**2
+
+def objective_function_derivative(w):
+    return 2 * (w - 5)
