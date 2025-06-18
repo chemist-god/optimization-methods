@@ -157,3 +157,12 @@ plt.xlabel('Optimization Step')
 plt.ylabel('Parameter Value (w)')
 plt.grid(True)
 plt.show()
+
+
+# Plot the history of the objective function value (loss)
+plt.plot(loss_history)
+plt.title('SGD Optimization of Objective Function')
+plt.xlabel('Optimization Step')
+plt.ylabel('Objective Function Value ((w-5)^2)')
+plt.grid(True)
+plt.show()
