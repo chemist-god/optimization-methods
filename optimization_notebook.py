@@ -43,3 +43,10 @@ def leaky_relu(x):
 
 # plotting ReLU
 plot_activation(leaky_relu, "ReLU Activation Function")
+
+
+# --- Derivative ReLU Activation Function --- #
+def relu_derivative(x):
+    return np.where(x > 0, 1, 0)
+
+plot_activation(relu_derivative, "Derivative ReLU Activation Function")
