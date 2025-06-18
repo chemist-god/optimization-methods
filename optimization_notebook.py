@@ -50,3 +50,11 @@ def relu_derivative(x):
     return np.where(x > 0, 1, 0)
 
 plot_activation(relu_derivative, "Derivative ReLU Activation Function")
+
+
+# --- Tanh Activation Function --- #
+def tanh(x):
+    return np.tanh(x)
+
+# plotting tanh
+plot_activation(tanh, "Tanh Activation Function")
