@@ -35,3 +35,11 @@ def relu(x):
 
 # plotting ReLU
 plot_activation(relu, "ReLU Activation Function")
+
+
+# --- LeakyReLU Activation Function --- #
+def leaky_relu(x):
+    return np.maximum(0.1*x, x)
+
+# plotting ReLU
+plot_activation(leaky_relu, "ReLU Activation Function")
