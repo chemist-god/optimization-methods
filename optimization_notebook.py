@@ -147,3 +147,13 @@ for step in range(num_steps):
     # Store the updated parameter and loss
     w_history.append(params['w'])
     loss_history.append(objective_function(params['w']))
+
+
+
+    # Plot the history of the parameter value
+plt.plot(w_history)
+plt.title('SGD Optimization of Parameter w')
+plt.xlabel('Optimization Step')
+plt.ylabel('Parameter Value (w)')
+plt.grid(True)
+plt.show()
