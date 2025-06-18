@@ -96,3 +96,13 @@ class SGDOptimizer:
     def update(self, params, grads):
         for key in params.keys():
             params[key] -= self.learning_rate * grads[key]
+
+
+# To simulate/demonstrate SGD,
+# let's define a simple function to minimize -> #MSE
+
+def mean_squared_error(y_true, y_pred):
+    return np.mean((y_true - y_pred)**2)
+
+def mean_squared_error_derivative(y_true, y_pred):
+    return -2 * (y_true - y_pred) / len(y_true)
