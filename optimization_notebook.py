@@ -133,3 +133,17 @@ optimizer = SGDOptimizer(learning_rate=0.1)
 
 w_history = [params['w']]
 loss_history = [objective_function(params['w'])]
+
+
+# Simulate the optimization process
+# Calculate the gradient of the objective function with respect to 'w'
+
+for step in range(num_steps):
+    grads = {'w': objective_function_derivative(params['w'])}
+
+    # Update the parameter using SGD
+    optimizer.update(params, grads)
+
+    # Store the updated parameter and loss
+    w_history.append(params['w'])
+    loss_history.append(objective_function(params['w']))
