@@ -127,3 +127,9 @@ num_steps = 50
 
 # initiating the optimizer
 optimizer = SGDOptimizer(learning_rate=0.1)
+
+
+# Store the history of the parameter value and the objective function value
+
+w_history = [params['w']]
+loss_history = [objective_function(params['w'])]
