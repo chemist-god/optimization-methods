@@ -76,3 +76,13 @@ def selu(x):
 
 # plotting selu
 plot_activation(selu, "SELU Activation Function")
+
+
+# --- Derivative SELU Activation Function --- #
+def selu_derivative(x):
+  scale = 1.0507009873554804
+  alpha = 1.0732632423543772
+  return np.where(x > 0, scale, scale * alpha * np.exp(x))
+
+# plotting selu-derivative
+plot_activation(selu_derivative, "Derivative SELU Activation Function")
