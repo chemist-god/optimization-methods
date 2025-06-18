@@ -166,3 +166,18 @@ plt.xlabel('Optimization Step')
 plt.ylabel('Objective Function Value ((w-5)^2)')
 plt.grid(True)
 plt.show()
+
+
+
+# Plot of the objective function and the path taken by SGD
+w_values = np.linspace(0, 10, 100)
+objective_values = objective_function(w_values)
+
+plt.plot(w_values, objective_values, label='Objective Function $(w-5)^2$')
+plt.plot(w_history, loss_history, 'ro-', markersize=5, label='SGD Path')
+plt.title('SGD Optimization Path on the Objective Function Landscape')
+plt.xlabel('Parameter Value (w)')
+plt.ylabel('Objective Function Value')
+plt.legend()
+plt.grid(True)
+plt.show()
