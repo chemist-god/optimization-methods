@@ -66,3 +66,13 @@ def tanh_derivative(x):
 
 # plotting tanh
 plot_activation(tanh_derivative, "Derivative Tanh Activation Function")
+
+
+# --- SELU Activation Function --- #
+def selu(x):
+  scale = 1.0507009873554804
+  alpha = 1.0732632423543772
+  return np.where(x > 0, x * scale, scale*alpha*(np.exp(x)-1))
+
+# plotting selu
+plot_activation(selu, "SELU Activation Function")
