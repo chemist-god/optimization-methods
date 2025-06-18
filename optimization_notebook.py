@@ -58,3 +58,11 @@ def tanh(x):
 
 # plotting tanh
 plot_activation(tanh, "Tanh Activation Function")
+
+
+# --- Derivative Tanh Activation Function --- #
+def tanh_derivative(x):
+    return 1 - np.tanh(x)**2
+
+# plotting tanh
+plot_activation(tanh_derivative, "Derivative Tanh Activation Function")
