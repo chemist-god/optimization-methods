@@ -117,3 +117,13 @@ def objective_function(w):
 
 def objective_function_derivative(w):
     return 2 * (w - 5)
+
+
+# We will initate 'w' at 0.0, and take 50 steps to find the optimal minimum
+
+initial_w = 0.0
+params = {'w': initial_w}
+num_steps = 50
+
+# initiating the optimizer
+optimizer = SGDOptimizer(learning_rate=0.1)
