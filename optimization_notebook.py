@@ -25,3 +25,13 @@ def plot_activation(activation: callable, title: str):
   plt.ylabel('Output')
   plt.grid(True)
   plt.show()
+
+                                         # --- Activation Functions --- #
+
+
+# --- ReLU Activation Function --- #
+def relu(x):
+    return np.maximum(0, x)
+
+# plotting ReLU
+plot_activation(relu, "ReLU Activation Function")
