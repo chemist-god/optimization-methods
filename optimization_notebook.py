@@ -202,3 +202,7 @@ def linear_quantize(data_float, num_bits=8):
 
 def linear_dequantize(data_quantized, scale, min_val):
     return data_quantized.astype(float) * scale + min_val
+
+    # Example float weights
+weights_float = np.random.randn(5) * 5
+print("Original Floats:", weights_float)
