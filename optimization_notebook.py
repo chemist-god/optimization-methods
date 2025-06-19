@@ -181,3 +181,24 @@ plt.ylabel('Objective Function Value')
 plt.legend()
 plt.grid(True)
 plt.show()
+
+
+                        # Quantization 
+# Performing 'Simple' Linear Quantization,
+# & Dequantization, of course.
+
+def linear_quantize(data_float, num_bits=8):
+    # Find the range of the float data
+    min_val, max_val = np.min(data_float), np.max(data_float)
+
+    # Calculate the scale factor - S
+    scale = (max_val - min_val) / (2**num_bits - 1)
+
+    # zero-point = - min_val / scale
+    # Quantize to integer
+    data_quantized = np.round((data_float - min_val) / scale).astype(int)
+
+    return data_quantized, scale, min_val
+
+def linear_dequantize(data_quantized, scale, min_val):
+    return data_quantized.astype(float) * scale + min_val
