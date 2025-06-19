@@ -210,3 +210,5 @@ print("Original Floats:", weights_float)
 quantized_weights, scale, min_val = linear_quantize(weights_float)
 print("Quantized Integers (8-bit):", quantized_weights)
 
+dequantized_weights = linear_dequantize(quantized_weights, scale, min_val)
+print("Dequantized Floats:", dequantized_weights)
