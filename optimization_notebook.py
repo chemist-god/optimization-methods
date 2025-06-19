@@ -206,3 +206,7 @@ def linear_dequantize(data_quantized, scale, min_val):
     # Example float weights
 weights_float = np.random.randn(5) * 5
 print("Original Floats:", weights_float)
+
+quantized_weights, scale, min_val = linear_quantize(weights_float)
+print("Quantized Integers (8-bit):", quantized_weights)
+
